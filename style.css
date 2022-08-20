@@ -71,3 +71,9 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+.scrolling{
+  background-color: black;
+  opacity: 80%;
+  transition: 0.6s;
+}

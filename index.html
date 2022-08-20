@@ -76,28 +76,29 @@
 <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> -->
 
 
-  <div class="banner-wrap vh-100 vw-100 text-white">
+  <div class="banner-wrap vh-100 vw-100 text-white d-flex align-items-center justify-content-center">
     <div class="overlay"></div>
-    <header class="px-5 p-3 text-white">
+    <header class="px-5 p-3 text-white fixed-top">
       <div>
         <h3 class="float-md-start text-center">Portfolio</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-          <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-          <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+          <a class="nav-link fw-bold py-1 px-0" href="#about-us">About us</a>
+          <a class="nav-link fw-bold py-1 px-0" href="#projects ">Projects</a>
+          <a class="nav-link fw-bold py-1 px-0" href="#contact-us">Contact</a>
         </nav>
       </div>
     </header>
-    <main class="d-flex flex-column align-items-center justify-content-center h-75 text-center">
+    <main class="text-center">
       <h1 class="display-1">I am Tamsanqa Thwala.</h1>
-      <p class="lead">Fullstack Developer. Software Developer. Embedded Systems Engineer.</p>
-      <p class="lead">
+      <span id= "typed" class="lead"></span>
+      <!-- <p class="lead">
         <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-      </p>
+      </p> -->
     </main>
 </div>
 
-<section>
+<section id="about-us">
   <div class="container p-5">
     <div class="card">
       <div class="card-body">
@@ -135,7 +136,7 @@
   </div>
 </section>
 
-<section>
+<section id="projects">
 
   <div class="container p-3">
     <h1 class="text-center"><mark>Projects</mark></h1>
@@ -192,7 +193,7 @@
     </div>
 </section>
 
-<section>
+<section id="contact">
   <div class="container p-5">
     <div class="card">
       <div class="card-body px-5 text-center">
@@ -244,6 +245,29 @@
 
   </div>
 </section>
-    
+
+<footer class="bg-dark text-white text-center">
+  <div class="container p-3">
+    <p>
+      Developed by Tamsanqa Thwala using Bootstrap.
+    </p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener("scroll", ()=>{
+    const header = document.querySelector("header")
+    header.classList.toggle("scrolling", window.scrollY > 0)
+  });
+</script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed("#typed", {
+    strings: ["Fullstack Developer.","Software Developer.", "Computer Science Student."],
+    typeSpeed: 75
+  });
+</script>
+
   </body>
 </html>
